@@ -1,0 +1,335 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PAHU</title>
+
+  <!-- << Slick slider css >> -->
+  <link rel="stylesheet" href="libs/slick-slider/slick.css">
+
+  <!-- << Styles bundle >> -->
+  <link rel="stylesheet" href="bundle.css">
+
+  <!-- << Animations On Scroll styles >> -->
+  <link rel="stylesheet" href="libs/aos/aos.css">
+</head>
+<body class="locked">
+  <!-- ++ Preloader ++ -->
+  <div class="preloader">
+    <div class="preloader__info container">
+      <span class="preloader__perc">0%</span>
+      <div class="preloader__progressline-wrapper">
+        <div class="preloader__progressline"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ++ Navbar ++ -->
+  <nav class="navbar">
+    <div class="navbar__content container">
+      <img src="img/logo.png" alt="" class="navbar__item logo" width="191px" height="30px">
+      <div class="nav navbar__item">
+        <a href="" class="nav__item">home</a>
+        <a href="" class="nav__item">features</a>
+        <a href="" class="nav__item">shop</a>
+        <a href="" class="nav__item">blog</a>
+        <a href="" class="nav__item">accessories</a>
+        <a href="" class="nav__item">contact</a>
+      </div>
+      <div class="tools navbar__item">
+        <a href="" class="tools__item icon-search"><i class="fal fa-search"></i></a>
+        <a href="" class="tools__item icon-liked"><i class="fal fa-heart"></i></a>
+        <a href="" class="tools__item icon-cart"><i class="fal fa-shopping-cart"></i></a>
+        <a href="" class="tools__item show-menu-button"><i class="far fa-bars"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ++ Menu ++ -->
+  <div class="menu hidden">
+    <a href="" class="hide-menu-button"><i class="far fa-times"></i></a>
+    <nav class="menu-nav"></nav>
+  </div>
+
+  <!-- ++ Header slider ++ -->
+  <header class="header-slider">
+    <div class="header-slider__item header-slide">
+      <img class="header-slide__image" srcset="/img/dist/header1-sm.jpg 450w,
+                                               /img/dist/header1-md.jpg 1000w,
+                                               /img/dist/header1-lg.jpg 1440w"
+                                          src="/img/dist/header1-lg.jpg" alt="">
+      <div class="header-slide__content">
+        <span class="header-slide__suptitle">Welcome to&nbsp;<span class="header-slide__accent">Pahu Design</span></span>
+        <h1 class="header-slide__header">We'll take care<br>of you</h1>
+      </div>
+    </div>
+    <div class="header-slider__item header-slide" style="background-image: url('/img/header2.jpg')">
+      <img class="header-slide__image" srcset="/img/dist/header2-sm.jpg 450w,
+                                               /img/dist/header2-md.jpg 1000w,
+                                               /img/dist/header2-lg.jpg 1440w"
+                                       src="/img/dist/header2-lg.jpg" alt="">
+      <div class="header-slide__content">
+        <span class="header-slide__suptitle">Trust&nbsp;<span class="header-slide__accent">us</span></span>
+        <h1 class="header-slide__header">We propose<br>a good deal</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- ++ Features ++ -->
+  <section class="features">
+    <h1 class="features__header header1 header1--accent">why choose us</h1>
+
+    <div class="features__content container">
+      <div class="advantages advantages--left">
+        <div class="advantages__block" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+          <div class="advantages__content">
+            <h2 class="advantages__header">modern design</h2>
+            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <img src="img/design-icon.png" alt="Tools" class="advantages__icon">
+        </div>
+
+        <div class="advantages__block" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+          <div class="advantages__content">
+            <h2 class="advantages__header">unique quality</h2>
+            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <img src="img/quality-icon.png" alt="Tools" class="advantages__icon">
+        </div>
+      </div>
+
+      <img src="img/features-image.png" alt="Yellow chair" class="features__image">
+
+      <div class="advantages advantages--right">
+        <div class="advantages__block" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
+          <img src="img/price-icon.png" alt="Tools" class="advantages__icon">
+          <div class="advantages__content">
+            <h2 class="advantages__header">honest prices</h2>
+            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <div class="advantages__block" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
+          <img src="img/support-icon.png" alt="Tools" class="advantages__icon">
+          <div class="advantages__content">
+            <h2 class="advantages__header">great support</h2>
+            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stuff">
+    <div class="stuff__item--primary stuff__item" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+      <img src="img/stuff1-1.jpg" srcset="img/dist/stuff1-1-sm.jpg 450w, img/dist/stuff1-1-md.jpg 1000w" alt="" class="stuff__image">
+      <div class="stuff__content stuff__content--left" style="color: #749d26;">
+        <div class="stuff__header">patio furniture vietnam</div>
+        <a href="" class="stuff__button">view detail<i class="far fa-long-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="stuff__item stuff__item--secondary" data-aos="fade-in" data-aos-once="true" data-aos-delay="250" data-aos-duration="1000">
+      <img srcset="img/dist/stuff1-2-sm.jpg 450w, img/dist/stuff1-2-md.jpg 1000w" src="img/stuff1-2.jpg" alt="" class="stuff__image">
+    </div>
+
+    <div class="stuff__item stuff__item--secondary" data-aos="fade-in" data-aos-once="true" data-aos-delay="250" data-aos-duration="1000">
+      <img srcset="img/dist/stuff2-2-sm.jpg 450w, img/dist/stuff2-2-md.jpg 1000w" src="img/stuff2-2.jpg" alt="" class="stuff__image">
+    </div>
+    <div class="stuff__item stuff__item--primary" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
+      <img srcset="img/dist/stuff2-1-sm.jpg 450w, img/dist/stuff2-1-md.jpg 1000w"  src="img/stuff2-1.jpg" alt="" class="stuff__image">
+      <div class="stuff__content stuff__content--right" style="color: #599ba7;">
+        <div class="stuff__header">design by janet park</div>
+        <a href="" class="stuff__button">view detail<i class="far fa-long-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="stuff__item stuff__item--primary" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+      <img srcset="img/dist/stuff3-1-sm.jpg 450w, img/dist/stuff3-1-md.jpg 1000w" src="img/stuff3-1.jpg" alt="" class="stuff__image">
+      <div class="stuff__content stuff__content--left" style="color: #352b30;">
+        <div class="stuff__header">wm munoz ceramics</div>
+        <a href="" class="stuff__button">view detail<i class="far fa-long-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="stuff__item stuff__item--secondary" data-aos="fade-in" data-aos-once="true" data-aos-delay="250" data-aos-duration="1000">
+      <img srcset="img/dist/stuff3-2-sm.jpg 450w, img/dist/stuff3-2-md.jpg 1000w" src="img/stuff3-2.jpg" alt="" class="stuff__image">
+    </div>
+  </div>
+
+  <!-- ++ Shop ++ -->
+  <section class="shop">
+    <h1 class="header1 header1--dark">our collection</h1>
+    <div class="container">
+      <div class="shop__items"></div>
+    </div>
+  </section>
+
+  <!-- ++ About ++ -->
+  <section class="about">
+    <h1 class="header1 header1--accent">our designers</h1>
+    <div class="container">
+      <div class="about__content">
+        <div class="designer" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <img src="img/designer1.jpg" alt="Bertil Stam" class="designer__image">
+          <span class="designer__name">Bertil Stam</span>
+        </div>
+        <div class="designer" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+          <img src="img/designer2.jpg" alt="Janet Park" class="designer__image">
+          <span class="designer__name">Janet Park</span>
+        </div>
+        <div class="designer" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <img src="img/designer3.jpg" alt="Wm Munoz" class="designer__image">
+          <span class="designer__name">Wm Munoz</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ++ Projects ++ -->
+  <section class="projects">
+    <h1 class="header1 header1--dark">Our projects</h1>
+    <div class="projects-slider"></div>
+  </section>
+
+  <!-- ++ Blog ++ -->
+  <section class="blog">
+    <h1 class="header1 header1--dark">from our blog</h1>
+    <div class="container">
+      <div class="blog__posts"></div>
+    </div>
+  </section>
+
+  <!-- ++ Footer ++ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__item contacts">
+          <h2 class="contacts__header">call us now</h2>
+          <p class="contacts__text">Office telephone: (251) 546-9442<br>Hotline: 906-2721</p>
+        </div>
+
+        <div class="footer__item contacts">
+          <h2 class="contacts__header">come visit us</h2>
+          <p class="contacts__text">123 6th St.<br>Melbourne, FL 32904</p>
+        </div>
+
+        <div class="footer__item contacts">
+          <h2 class="contacts__header">send a message</h2>
+          <p class="contacts__text">Email: pahudesign@pahu.vn<br>Inquiries: support@pahu.vn </p>
+        </div>
+
+        <div class="footer__item media">
+          <img src="img/logo.png" alt="" class="media__logo">
+          <div class="media__social social">
+            <a href="" class="social__item"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="social__item"><i class="fab fa-google"></i></a>
+            <a href="" class="social__item"><i class="fab fa-twitter"></i></a>
+            <a href="" class="social__item"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__item footer-info">
+          <h2 class="footer-info__header">Work hours</h2>
+          <p class="footer-info__text">Monday - Friday: 08:00 am - 17:00 pm.<br>Saturday: 09:00 am - 12h30 pm.</p>
+        </div>
+
+        <div class="footer__item footer-info">
+          <h2 class="footer-info__header">Newsletter</h2>
+          <form action="" class="subscribe">
+            <input type="text" class="subscribe__input" placeholder="Your email...">
+            <button type="submit" class="subscribe__submit"><i class="far fa-long-arrow-right"></i></button>
+          </form>
+          <p class="footer-info__text">Monday - Friday: 08:00 am - 17:00 pm.<br>Saturday: 09:00 am - 12h30 pm.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <=> Templates <=> -->
+  <div class="templates" style="display: none">
+    <!-- <+ Product +> -->
+    <div class="product">
+      <img class="product__image">
+      <h2 class="product__header">Corona chair</h2>
+      <p class="product__description">Printed evening dress with straight sleeves with black thin waist belt.</p>
+      <span class="product__price">$14.86</span>
+      <div class="product-menu">
+        <a href="" class="product-menu__item"><i class="fal fa-link"></i></a>
+        <a href="" class="product-menu__item"><i class="fal fa-heart"></i></a>
+        <a href="" class="product-menu__item"><i class="fal fa-shopping-cart"></i></a>
+      </div>
+    </div>
+    <!-- <+ About Us background transparent squares +> -->
+    <img src="img/about-texture.png" alt="" class="designer__texture">
+    <!-- <+ Projects slider item +> -->
+    <div class="projects-slider__item project">
+      <h2 class="project__header">modern living room</h2>
+      <span class="project__category">interior design</span>
+    </div>
+    <!-- <+ Post +> -->
+    <div class="post">
+      <img src="" alt="" class="post__image">
+      <div class="post__content">
+        <h2 class="post__header"></h2>
+        <p class="post__text">Feel alive! So if you’re looking for, here is a list of some of the most popular and fiestas the Mardin has to offer thisfiestas the Mardin has to offer!</p>
+        <a href="" class="post__button">read more &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- << jQuery >> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    if (typeof jQuery === 'undefined') {
+      document.write('<script src="libs/jquery/jquery-3.4.1.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- ++ Preloader script -->
+  <script>
+    let images = document.images,
+    imagesCount = images.length,
+    imagesLoaded = 0,
+    percIndicator = $('.preloader__perc'),
+    progressline = $('.preloader__progressline');
+
+    for (let i = 0; i < images.length; i++) {
+      let imageClone = new Image();
+      imageClone.src = images[i].src;
+      imageClone.onload = imageLoaded;
+      imageClone.onerror = imageLoaded;
+    }
+
+    function imageLoaded() {
+      imagesLoaded++;
+      let percLoaded = imagesLoaded / imagesCount * 100;
+      let formatPercLoaded = parseInt(percLoaded) + '%';
+      percIndicator.text(formatPercLoaded);
+      progressline.css({width: formatPercLoaded});
+
+      if (percLoaded === 100) {
+          loadingFinished();
+      }
+    }
+    
+    function loadingFinished() {
+      $('.preloader').addClass('hidden');
+      $('body').removeClass('locked');
+    }
+  </script>
+
+  <!-- << FontAwesome >> -->
+  <script src="libs/font-awesome/all.min.js"></script>
+
+  <!-- << Slick slider js >> -->
+  <script src="libs/slick-slider/slick.min.js"></script>
+
+  <!-- << Scripts bundle >> -->
+  <script src="bundle.js"></script>
+
+  <!-- << Animations On Scroll scripts >> -->
+  <script src="libs/aos/aos.js"></script>
+  <script>AOS.init()</script>
+</body>
+</html>

@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap')
+
+
+*
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+
+html
+  font-size: 1/16 * 100%
+  @media (max-width: $TABLET)
+    font-size: 0.9px
+  @media (max-width: $PHONE)
+    font-size: 0.8px
+
+body
+  overflow-x: hidden
+  font: 16rem Poppins
+  &.locked
+    overflow-y: hidden
+
+a
+  text-decoration: none
+
+section
+  padding: 95 0 150 0
+
+.header1
+  margin: 0 auto 120 auto
+  text-align: center
+  font: 600 40rem Poppins
+  letter-spacing: 4px
+  text-transform: uppercase
+  display: flex
+  flex-direction: column
+  align-items: center
+  &::after
+    display: block
+    margin: 15px 0 0
+  &--accent
+    color: $accent
+    &::after
+      content: url("/img/afterheader.svg")
+  &--dark
+    color: $dark
+    &::after
+      content: url("/img/afterheader-dark.svg")
+
+// :: Grid ::
+.container
+  width: 100%
+  max-width: 1200px
+  padding: 0 15
+  margin-left: auto
+  margin-right: auto
+
+
+// ++ Preloader ++
+.preloader
+  position: fixed
+  z-index: 99999
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: $dark
+  transition: $snail
+  &.hidden
+    transform: translate(-100%)
+    opacity: 0
+  &__info
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__perc
+    margin-bottom: 15px
+    font: 600 30rem Poppins
+    color: $light
+  &__progressline-wrapper
+    width: 100%
+    height: 3px
+    background-color: transparentize($light, 0.9)
+  &__progressline
+    height: 3px
+    width: 0%
+    background-color: $light
+
+
+// ++ Navbar ++
+.navbar
+  position: fixed
+  z-index: 1000
+  width: 100%
+  background-color: $dark
+  &__content
+    display: flex
+    align-items: center
+    @media (max-width: $TABLET)
+      justify-content: space-between
+  &__item
+    margin: 0 35
+    @media (max-width: $TABLET)
+      margin: 0
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+
+.logo
+  width: 191px
+  height: 30px
+  @media (max-width: $TABLET)
+    margin: 5 0
+  @media (max-width: $PHONE)
+    width: 120px
+    height: 19px
+
+.nav
+  flex: 1 0 auto
+  display: flex
+  justify-content: space-between
+  @media (max-width: $TABLET)
+    display: none
+  &__item
+    position: relative
+    padding: 35 0
+    color: $light
+    font: 600 14rem 'Poppins'
+    letter-spacing: 3px
+    text-transform: uppercase
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 100%
+      height: 0px
+      background-color: $accent
+      transform: translate(-50%)
+      transition: $fast
+    &:hover
+      &::after
+        height: 4px
+
+.tools
+  display: flex
+  justify-content: space-between
+  &__item
+    margin: 0 15
+    color: $light
+    font-size: 19rem
+    opacity: 0.7
+    @media (max-width: $PHONE)
+      margin: 0 10
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    &:hover
+      opacity: 1
+
+.show-menu-button
+  display: none
+  @media (max-width: $TABLET)
+    display: block
+
+
+// ++ Menu ++
+.menu
+  position: fixed
+  z-index: 999
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: $dark
+  transition: $smooth
+  overflow: hidden
+  &.hidden
+    bottom: 100%
+    opacity: 0
+
+.hide-menu-button
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 45px
+  border: 2px solid $light
+  border-radius: 50%
+  color: $light
+  font-size: 19rem
+  opacity: 0.7
+  transition: $fast
+  &:hover
+    opacity: 1
+
+.menu-nav
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__item
+    margin: 15 0
+    color: $light
+    font: 600 18rem Poppins
+    letter-spacing: 3px
+    text-transform: uppercase
+    transition: $fast
+    &:hover
+      color: $accent
+
+
+// ++ Header slider ++
+.header-slider
+  &__arrow
+    position: absolute
+    z-index: 100
+    top: 50%
+    transform: translate(0px, -50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 55px
+    height: 55px
+    border: 1px solid transparentize($light, 0.8)
+    border-radius: 50%
+    background-color: transparentize($dark, 0.8)
+    font-size: 40rem
+    color: $light
+    cursor: pointer
+    @media (max-width: $PHONE)
+      width: 45px
+      height: 45px
+    &--prev
+      left: 45px
+      @media (max-width: $PHONE)
+        left: 15px
+    &--next
+      right: 45px
+      @media (max-width: $PHONE)
+        right: 15px
+  &__item
+    position: relative
+    height: 100vh
+    outline: none
+    background-position: center
+    background-size: cover
+    &::after
+      content: ''
+      position: absolute
+      z-index: 100
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: center / cover $dark
+      opacity: 0.7
+  
+.header-slide
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__content
+    height: 100%
+    position: absolute
+    z-index: 200
+    top: 0
+    left: 12.5%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media (max-width: $TABLET)
+      left: 0
+      width: 100%
+      text-align: center
+      align-items: center
+  &__suptitle
+    margin-bottom: 55
+    display: flex
+    align-items: center
+    font: 25rem Poppins
+    color: $light
+    @media (max-width: $PHONE)
+      margin-bottom: 20
+    &::before
+      content: ''
+      display: block
+      width: 65px
+      height: 5px
+      margin-right: 20
+      background-color: $accent
+      @media (max-width: $TABLET)
+        display: none
+  &__accent
+    font-weight: 600
+    color: $accent
+  &__header
+    font: 600 60rem Poppins
+    color: $light
+    text-transform: uppercase
+    @media (max-width: $PHONE)
+      max-width: 270px
+
+
+// ++ Features ++
+.features
+  background-color: $dark
+  &__content
+    display: flex
+    align-items: center
+    @media (max-width: $PHONE)
+      flex-direction: column
+  &__image
+    width: 349px
+    height: 330px
+    @media (max-width: $TABLET)
+      display: none
+  
+.advantages
+  @media (max-width: $TABLET)
+    margin-right: 65
+  @media (max-width: $PHONE)
+    margin: 0 0 65 0
+    max-width: 360px
+  &:last-child
+    margin: 0
+  &--left
+    text-align: right
+    @media (max-width: $TABLET)
+      text-align: left
+    .advantages__icon
+      margin-left: 20
+      @media (max-width: $TABLET)
+        margin: 0 20 0 0
+  &--right
+    .advantages__icon
+      margin-right: 20
+  &__block
+    display: flex
+    align-items: flex-start
+    margin-bottom: 65
+    &:last-child
+      margin-bottom: 0
+  &__header
+    margin-bottom: 20
+    font: 600 20rem Poppins
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $accent
+  &__text
+    font: 14rem Poppins
+    color: $light
+  &__icon
+    min-width: 90px
+    max-height: 80px
+    object-fit: contain
+    @media (max-width: $TABLET)
+      order: -1
+
+.stuff
+  display: flex
+  flex-wrap: wrap
+  background: $dark
+  margin: -15
+  &__item
+    position: relative
+    height: 200px
+    margin: 15
+    &::after
+      content: ''
+      position: absolute
+      z-index: 100
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $dark
+      opacity: 0.4
+    &--primary
+      flex: 1 0 calc(2/3*100% - 15px*2)
+    &--secondary
+      flex: 1 0 calc(100%/3 - 15px*2)
+      @media (max-width: $TABLET)
+        display: none
+  &__content
+    position: absolute
+    z-index: 200
+    top: 30
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: calc(100% - 30px*2)
+    padding: 10
+    background: transparentize($light, 0.3)
+    &--left
+      left: 30  
+    &--right
+      right: 30
+      text-align: right
+  &__header
+    font: 600 30rem Poppins
+    line-height: 1.5
+    letter-spacing: 3px
+    text-transform: uppercase
+  &__button
+    font-size: 14rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: inherit
+    svg
+      transition: $fast
+    &:hover
+      svg
+        transform: translate(5px)
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+
+// ++ Shop ++
+.shop
+  background-color: $bg-light
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 -30 -15
+    width: calc(100% + 30px)
+
+.product
+  position: relative
+  margin: 0 15 30
+  padding: 25
+  flex: 0 0 calc(100%/4 - 15px*2)
+  background-color: $light
+  @media (max-width: $TABLET)
+    flex: 0 0 calc(100%/3 - 15px*2)
+  @media (max-width: $PHONE)
+    flex: 0 0 calc(100%/2 - 15px*2)
+    min-width: 290px
+    margin-left: auto
+    margin-right: auto
+  &__image
+    height: 250px
+    width: 100%
+    object-fit: contain
+  &__description
+    margin-bottom: 20
+    font: 14rem Poppins
+    line-height: 1.3
+    color: $muted
+  &__price
+    font: 600 27rem Poppins
+    color: $darker
+  &.is-new
+    &::before
+      content: url('/img/new-mark.png')
+      position: absolute
+      top: 0
+      left: 0
+  &::after
+    content: ''
+    position: absolute
+    z-index: 100
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: -15
+    background-color: $accent
+    opacity: 0
+    transition: $fast
+  &:hover
+    &::after
+      opacity: 0.75
+    .product-menu
+      z-index: 200
+      opacity: 1
+
+.product-menu
+  display: flex
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: -9999
+  padding: 20 34
+  opacity: 0
+  background-color: transparentize($dark, 0.2)
+  border-radius: 40px
+  &__item
+    margin: 0 8 0
+    color: $light
+    font-size: 20rem
+    opacity: 0.7
+    &:hover
+      opacity: 1
+
+
+// ++ About ++
+.about
+  background: center / cover url('/img/about-bg.jpg')
+  &__content
+    position: relative
+    z-index: 100
+    display: flex
+    margin: 0 -15
+    @media (max-width: $TABLET)
+      flex-direction: column
+      margin: 0
+
+.designer
+  position: relative
+  flex: 0 0 calc(100%/3 - 15px*2)
+  margin: 0 15 60
+  @media (max-width: $TABLET)
+      max-width: 330px
+      margin-left: auto
+      margin-right: auto
+  &__texture
+    position: absolute
+    bottom: -10%
+    left: -25%
+    z-index: -100
+    width: 100%
+  &__image
+    width: 100%
+    margin-bottom: 30px
+  &__name
+    display: flex
+    align-items: center
+    font: 600 30rem Poppins
+    color: $light
+    letter-spacing: 2px
+    &::after
+      content: ''
+      flex: 1 0 auto
+      display: block
+      height: 3px
+      margin-left: 15
+      background: $accent
+
+
+// ++ Projects ++
+.projects
+  padding-bottom: 0
+
+.projects-slider
+  height: 900px
+  @media (max-width: $PHONE)
+    height: 480px
+  &__item
+    position: relative
+    outline: none
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 100
+      background: #404040
+      opacity: 0.5
+      transition: $fast
+    &:hover
+      &::after
+        background: $dark
+        opacity: 0.8
+  &__arrow
+    position: absolute
+    z-index: 100
+    top: 50%
+    transform: translate(0px, -50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 70px
+    height: 70px
+    border: 1px solid transparentize($light, 0.8)
+    border-radius: 50%
+    background-color: transparentize($dark, 0.8)
+    font-size: 40rem
+    color: $light
+    cursor: pointer
+    @media (max-width: $PHONE)
+      width: 45px
+      height: 45px
+    &--prev
+      left: 45px
+    &--next
+      right: 45px
+
+.project
+  padding: 60px
+  color: $light
+  text-transform: uppercase
+  display: flex !important
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+  & > *
+    position: relative
+    z-index: 200
+  &__header
+    font: 600 30rem Poppins
+    letter-spacing: 3px
+  &__category
+    display: block
+    width: 300px
+    font: 600 20rem Poppins
+    letter-spacing: 8px
+    transform-origin: left bottom
+    transform: rotate(-90deg)
+
+
+// ++ Blog ++
+.blog
+  background: $bg-light
+  &__posts
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15 -30
+
+.post
+  flex: 1 0 calc(100%/3 - 15px*2)
+  min-width: 270px
+  margin: 0 15 30
+  background: $light
+  &__image
+    height: 270px
+    width: 100%
+    object-fit: cover
+  &__content
+    padding: 45 25 25
+  &__header
+    font: 600 20rem 
+    color: $darker
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__text
+    font: 14rem Poppins
+    color: $muted
+    margin-bottom: 25
+  &__button
+    display: inline-block
+    padding: 20 25
+    font: 14rem Poppins
+    color: $darker
+    text-transform: uppercase
+    background: $accent
+    transition: $fast
+    &:hover
+      background: scale-color($accent, $lightness: -10%)
+
+
+// ++ Footer ++
+.footer
+  background: $dark
+  padding: 65 0
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: -30 -15
+  &__item
+    flex: 0 0 calc(100%/3 - 15px*2)
+    min-width: 270px
+    margin: 30 15
+
+.contacts
+  padding: 15 20
+  border-left: 4px solid $accent
+  &__header
+    margin-bottom: 10
+    font: 600 25rem Poppins
+    letter-spacing: 2px
+    color: $accent
+    text-transform: uppercase
+  &__text
+    font: 14rem Poppins
+    line-height: 2
+    color: $light
+
+.media
+  &__logo
+    width: 100%
+    max-width: 250px
+    margin-bottom: 35px
+  &__social
+    width: 100%
+    max-width: 250px
+
+.social
+  display: flex
+  justify-content: space-between
+  &__item
+    width: 42px
+    height: 42px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid $light
+    border-radius: 50%
+    font-size: 20rem
+    color: $light
+    opacity: 0.7
+    transition: $fast
+    &:hover
+      opacity: 1
+
+.footer-info
+  &__header
+    padding-bottom: 10
+    font: 600 30rem Poppins
+    color: $light
+  &__text
+    font: 14rem Poppins
+    line-height: 2
+    color: $muted
+
+.subscribe
+  margin-bottom: 10
+  padding: 15
+  display: flex
+  align-items: center
+  border: 1px solid $muted
+  color: $muted
+  &__input
+    flex: 1 0 auto
+    border: none
+    outline: none
+    background: none
+    font: 14rem Poppins
+    color: $light
+    &::placeholder
+      color: $muted
+  &__submit
+    border: none
+    outline: none
+    background: none
+    color: $muted
+    font-size: 16rem
+    cursor: pointer
+    transition: $fast
+    &:hover
+      color: $light
+ 
