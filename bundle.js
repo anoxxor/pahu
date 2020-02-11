@@ -76,35 +76,35 @@ $('.hide-menu-button').click(function (e) {
 
 (function () {
   var slidesData = [{
-    image: '/img/projects1.jpg',
+    image: '/img/dist/projects1-orig.jpg',
     imagePosition: 'left bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects2.jpg',
+    image: '/img/dist/projects2-orig.jpg',
     imagePosition: '25% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects3.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects4.jpg',
+    image: '/img/dist/projects4-orig.jpg',
     imagePosition: '40% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects2.jpg',
+    image: '/img/dist/projects2-orig.jpg',
     imagePosition: '25% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects3.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects4.jpg',
+    image: '/img/dist/projects4-orig.jpg',
     imagePosition: '40% bottom',
     imageSizing: 'cover'
   }, {
-    image: '/img/projects3.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }];
@@ -153,23 +153,23 @@ $('.hide-menu-button').click(function (e) {
 
 (function () {
   var productsData = [{
-    image: 'img/chair1.jpg',
+    image: 'img/dist/chair1-orig.jpg',
     isNew: true
   }, {
-    image: 'img/chair6.jpg'
+    image: 'img/dist/chair6-orig.jpg'
   }, {
-    image: 'img/chair2.jpg'
+    image: 'img/dist/chair2-orig.jpg'
   }, {
-    image: 'img/chair3.jpg',
+    image: 'img/dist/chair3-orig.jpg',
     isNew: true
   }, {
-    image: 'img/chair4.jpg'
+    image: 'img/dist/chair4-orig.jpg'
   }, {
-    image: 'img/chair5.jpg'
+    image: 'img/dist/chair5-orig.jpg'
   }, {
-    image: 'img/chair6.jpg'
+    image: 'img/dist/chair6-orig.jpg'
   }, {
-    image: 'img/chair1.jpg',
+    image: 'img/dist/chair1-orig.jpg',
     isNew: true
   }];
   var shopContainer$ = $('.shop__items');

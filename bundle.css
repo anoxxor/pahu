@@ -44,11 +44,11 @@ section {
   .header1--accent {
     color: #ffce76; }
     .header1--accent::after {
-      content: url("/img/afterheader.svg"); }
+      content: url("/img/dist/afterheader.svg"); }
   .header1--dark {
     color: #181817; }
     .header1--dark::after {
-      content: url("/img/afterheader-dark.svg"); }
+      content: url("/img/dist/afterheader-dark.svg"); }
 
 .container {
   width: 100%;
@@ -554,7 +554,7 @@ section {
     font: 600 27rem Poppins;
     color: #000; }
   .product.is-new::before {
-    content: url("/img/new-mark.png");
+    content: url("/img/dist/new-mark-orig.png");
     position: absolute;
     top: 0;
     left: 0; }
@@ -599,7 +599,7 @@ section {
       opacity: 1; }
 
 .about {
-  background: center/cover url("/img/about-bg.jpg"); }
+  background: center/cover url("/img/dist/about-bg-orig.jpg"); }
   .about__content {
     position: relative;
     z-index: 100;

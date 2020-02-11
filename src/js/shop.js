@@ -1,14 +1,14 @@
 (() => {
 
 let productsData = [
-  {image: 'img/chair1.jpg', isNew: true},
-  {image: 'img/chair6.jpg'},
-  {image: 'img/chair2.jpg'},
-  {image: 'img/chair3.jpg', isNew: true},
-  {image: 'img/chair4.jpg'},
-  {image: 'img/chair5.jpg'},
-  {image: 'img/chair6.jpg'},
-  {image: 'img/chair1.jpg', isNew: true}
+  {image: 'img/dist/chair1-orig.jpg', isNew: true},
+  {image: 'img/dist/chair6-orig.jpg'},
+  {image: 'img/dist/chair2-orig.jpg'},
+  {image: 'img/dist/chair3-orig.jpg', isNew: true},
+  {image: 'img/dist/chair4-orig.jpg'},
+  {image: 'img/dist/chair5-orig.jpg'},
+  {image: 'img/dist/chair6-orig.jpg'},
+  {image: 'img/dist/chair1-orig.jpg', isNew: true}
 ];
 
 let shopContainer$ = $('.shop__items');

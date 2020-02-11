@@ -2,42 +2,42 @@
 
   let slidesData = [
     {
-      image: '/img/projects1.jpg',
+      image: '/img/dist/projects1-orig.jpg',
       imagePosition: 'left bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects2.jpg',
+      image: '/img/dist/projects2-orig.jpg',
       imagePosition: '25% bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects3.jpg',
+      image: '/img/dist/projects3-orig.jpg',
       imagePosition: '70% bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects4.jpg',
+      image: '/img/dist/projects4-orig.jpg',
       imagePosition: '40% bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects2.jpg',
+      image: '/img/dist/projects2-orig.jpg',
       imagePosition: '25% bottom',
       imageSizing: 'cover'
     },  
     {
-      image: '/img/projects3.jpg',
+      image: '/img/dist/projects3-orig.jpg',
       imagePosition: '70% bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects4.jpg',
+      image: '/img/dist/projects4-orig.jpg',
       imagePosition: '40% bottom',
       imageSizing: 'cover'
     },
     {
-      image: '/img/projects3.jpg',
+      image: '/img/dist/projects3-orig.jpg',
       imagePosition: '70% bottom',
       imageSizing: 'cover'
     },
