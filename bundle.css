@@ -99,7 +99,7 @@ section {
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background-color: #181817; }
+  background-color: rgba(24, 24, 23, 0.9); }
   .navbar__content {
     display: -webkit-box;
     display: flex;
@@ -885,5 +885,3 @@ section {
     transition: 0.3s; }
     .subscribe__submit:hover {
       color: #fff; }
-
-

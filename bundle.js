@@ -6,13 +6,13 @@
 
 (function () {
   var postsData = [{
-    image: 'img/dist/blog1-md.jpg',
+    image: '/img/dist/blog1-md.jpg',
     header: 'our new workspace'
   }, {
-    image: 'img/dist/blog2-md.jpg',
+    image: '/img/dist/blog2-md.jpg',
     header: 'modern collection'
   }, {
-    image: 'img/dist/blog3-md.jpg',
+    image: '/img/dist/blog3-md.jpg',
     header: 'beautiful things'
   }];
   var postTemplate = $('.templates .post');
@@ -73,38 +73,53 @@ $('.hide-menu-button').click(function (e) {
   $('.menu').addClass('hidden');
   $('body').removeClass('locked');
 });
+$(window).on('load', function () {
+  setTimeout(function () {
+    $("[data-scroll-target]").each(function () {
+      var curItem = $(this);
+      var targetOffset = $(curItem.data("scroll-target")).offset().top;
+      curItem.click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("html, body").stop().animate({
+          scrollTop: targetOffset
+        }, 1000);
+      });
+    });
+  }, 200);
+});
 
 (function () {
   var slidesData = [{
-    image: 'img/dist/projects1-orig.jpg',
+    image: '/img/dist/projects1-orig.jpg',
     imagePosition: 'left bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects2-orig.jpg',
+    image: '/img/dist/projects2-orig.jpg',
     imagePosition: '25% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects3-orig.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects4-orig.jpg',
+    image: '/img/dist/projects4-orig.jpg',
     imagePosition: '40% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects2-orig.jpg',
+    image: '/img/dist/projects2-orig.jpg',
     imagePosition: '25% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects3-orig.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects4-orig.jpg',
+    image: '/img/dist/projects4-orig.jpg',
     imagePosition: '40% bottom',
     imageSizing: 'cover'
   }, {
-    image: 'img/dist/projects3-orig.jpg',
+    image: '/img/dist/projects3-orig.jpg',
     imagePosition: '70% bottom',
     imageSizing: 'cover'
   }];

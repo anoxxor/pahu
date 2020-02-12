@@ -40,11 +40,11 @@ section
   &--accent
     color: $accent
     &::after
-      content: url("/img/dist/afterheader.svg")
+      content: url("img/dist/afterheader.svg")
   &--dark
     color: $dark
     &::after
-      content: url("/img/dist/afterheader-dark.svg")
+      content: url("img/dist/afterheader-dark.svg")
 
 // :: Grid ::
 .container
@@ -93,7 +93,7 @@ section
   position: fixed
   z-index: 1000
   width: 100%
-  background-color: $dark
+  background-color: transparentize($dark, 0.1)
   &__content
     display: flex
     align-items: center
@@ -466,7 +466,7 @@ section
     color: $darker
   &.is-new
     &::before
-      content: url('/img/dist/new-mark-orig.png')
+      content: url('img/dist/new-mark-orig.png')
       position: absolute
       top: 0
       left: 0
@@ -511,7 +511,7 @@ section
 
 // ++ About ++
 .about
-  background: center / cover url('/img/dist/about-bg-orig.jpg')
+  background: center / cover url('img/dist/about-bg-orig.jpg')
   &__content
     position: relative
     z-index: 100
