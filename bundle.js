@@ -73,7 +73,7 @@ $('.hide-menu-button').click(function (e) {
   $('.menu').addClass('hidden');
   $('body').removeClass('locked');
 });
-$(window).on('load', function () {
+$(window).on('load resize', function () {
   setTimeout(function () {
     $("[data-scroll-target]").each(function () {
       var curItem = $(this);
@@ -84,6 +84,8 @@ $(window).on('load', function () {
         $("html, body").stop().animate({
           scrollTop: targetOffset
         }, 1000);
+        $(".menu").addClass("hidden");
+        $("body").removeClass("locked");
       });
     });
   }, 200);

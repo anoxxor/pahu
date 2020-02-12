@@ -1,4 +1,4 @@
-$(window).on('load', function() {
+$(window).on('load resize', function() {
 
   setTimeout(() => {
     $("[data-scroll-target]").each(function() {
@@ -8,6 +8,8 @@ $(window).on('load', function() {
         e.preventDefault();
         e.stopPropagation();
         $("html, body").stop().animate({scrollTop: targetOffset}, 1000);
+        $(".menu").addClass("hidden");
+        $("body").removeClass("locked");
       })
     })
   }, 200);
